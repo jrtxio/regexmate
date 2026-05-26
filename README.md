@@ -1,14 +1,16 @@
 # RegexMate
 
-Agent-friendly regex CLI tool. Designed for humans and AI agents alike.
+[English](README.md) | [中文](README.zh-CN.md)
+
+A cross-platform GUI regular expression tool built with [Racket](https://racket-lang.org/), featuring AI assistance for more efficient regex creation. RegexMate also provides an agent-friendly CLI with structured JSON output.
 
 ## Features
 
-- **validate** — check regex syntax
-- **match** — test regex against text, with highlighted output
-- **explain** — break down regex into readable parts
-- **graph** — generate railroad diagram as SVG
-- **JSON mode** — structured output for agent consumption (`--json`)
+- **validate** -- check regex syntax validity
+- **match** -- test regex against text, with highlighted matches
+- **explain** -- break down a regex into human-readable parts
+- **graph** -- generate a railroad diagram as SVG
+- **JSON mode** -- structured output for agent consumption (`--json`)
 
 ## Usage
 
@@ -32,16 +34,19 @@ racket main.rkt graph 'a|b' -o diagram.svg
 ## JSON Output Examples
 
 **validate:**
+
 ```json
 {"pattern":"^\\d+$","valid":true}
 ```
 
 **match:**
+
 ```json
 {"pattern":"\\d+","text":"abc 123 def 456","matches":[{"value":"123","start":4,"end":7},{"value":"456","start":12,"end":15}],"count":2}
 ```
 
 **explain:**
+
 ```json
 {"pattern":"\\d{2,4}","parts":[{"type":"re-quantifier","description":"数字 (\\d) × {2,4}","raw":"\\d{2,4}"}]}
 ```
@@ -54,16 +59,17 @@ racket main.rkt graph 'a|b' -o diagram.svg
 
 ```
 regexmate/
-├── main.rkt                 # CLI entry point
+├── main.rkt                 CLI entry point
+├── run-tests.rkt            Test runner
 ├── core/
-│   ├── ast.rkt              # Regex AST data structures
-│   ├── regex-engine.rkt     # Validation and matching
-│   └── regex-parser.rkt     # Recursive descent parser
+│   ├── ast.rkt              Regex AST data structures
+│   ├── regex-engine.rkt     Validation and matching engine
+│   └── regex-parser.rkt     Recursive descent parser
 ├── output/
-│   ├── highlight.rkt        # ANSI terminal highlighting
-│   ├── json-format.rkt      # JSON output formatting
-│   ├── human-format.rkt     # Human-readable output
-│   └── railroad.rkt         # SVG railroad diagram generator
+│   ├── highlight.rkt        ANSI terminal highlighting
+│   ├── json-format.rkt      JSON output formatting
+│   ├── human-format.rkt     Human-readable output
+│   └── railroad.rkt         SVG railroad diagram generator
 └── tests/
     ├── test-regex-engine.rkt
     ├── test-regex-parser.rkt
