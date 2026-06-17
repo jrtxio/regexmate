@@ -1,5 +1,7 @@
 # RegexMate
 
+[![Language](https://img.shields.io/badge/language-Racket-red)] [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 [English](README.md) | [中文](README.zh-CN.md)
 
 A cross-platform GUI regular expression tool built with [Racket](https://racket-lang.org/), featuring AI assistance for more efficient regex creation. RegexMate also provides an agent-friendly CLI with structured JSON output.
