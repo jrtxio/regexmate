@@ -1,17 +1,18 @@
 # RegexMate
 
-[![Language](https://img.shields.io/badge/language-Racket-red)] [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)  [![English](https://img.shields.io/badge/lang-English-blue)](README.md) [![中文](https://img.shields.io/badge/lang-中文-red)](README.zh-CN.md)
-
-
 A cross-platform GUI regular expression tool built with [Racket](https://racket-lang.org/), featuring AI assistance for more efficient regex creation. RegexMate also provides an agent-friendly CLI with structured JSON output.
+
+![Racket](https://img.shields.io/badge/Racket-9F1D20?logo=racket&logoColor=white)
+
+**English** · [中文](README.zh-CN.md)
 
 ## Features
 
-- **validate** -- check regex syntax validity
-- **match** -- test regex against text, with highlighted matches
-- **explain** -- break down a regex into human-readable parts
-- **graph** -- generate a railroad diagram as SVG
-- **JSON mode** -- structured output for agent consumption (`--json`)
+- **validate** — check regex syntax validity
+- **match** — test regex against text, with highlighted matches
+- **explain** — break down a regex into human-readable parts
+- **graph** — generate a railroad diagram as SVG
+- **JSON mode** — structured output for agent consumption (`--json`)
 
 ## Usage
 
@@ -90,4 +91,4 @@ racket main.rkt <command> <args>
 
 ## License
 
-MIT
+This project does not currently include a license file.

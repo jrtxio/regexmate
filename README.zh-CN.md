@@ -1,16 +1,18 @@
 # RegexMate
 
-[English](README.md) | [中文](README.zh-CN.md)
-
 基于 [Racket](https://racket-lang.org/) 开发的跨平台 GUI 正则表达式工具，支持 AI 辅助构建正则。RegexMate 同时提供 Agent 友好的 CLI 模式，输出结构化 JSON。
+
+![Racket](https://img.shields.io/badge/Racket-9F1D20?logo=racket&logoColor=white)
+
+[English](README.md) · **中文**
 
 ## 功能特性
 
-- **validate** -- 验证正则语法是否有效
-- **match** -- 匹配测试，终端高亮显示匹配结果
-- **explain** -- 将正则表达式拆解为人类可读的说明
-- **graph** -- 生成 railroad diagram（SVG 格式）
-- **JSON 模式** -- 结构化输出，方便 agent 解析（`--json`）
+- **validate** —— 验证正则语法是否有效
+- **match** —— 匹配测试，终端高亮显示匹配结果
+- **explain** —— 将正则表达式拆解为人类可读的说明
+- **graph** —— 生成 railroad diagram（SVG 格式）
+- **JSON 模式** —— 结构化输出，方便 agent 解析（`--json`）
 
 ## 使用方法
 
@@ -89,4 +91,4 @@ racket main.rkt <command> <args>
 
 ## 许可证
 
-MIT
+本项目暂未包含许可证文件。
