@@ -2,7 +2,7 @@
 
 A cross-platform GUI regular expression tool built with [Racket](https://racket-lang.org/), featuring AI assistance for more efficient regex creation. RegexMate also provides an agent-friendly CLI with structured JSON output.
 
-![Racket](https://img.shields.io/badge/Racket-9F1D20?logo=racket&logoColor=white)
+![Racket](https://img.shields.io/badge/Racket-9F1D20?logo=racket&logoColor=white) [![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 **English** · [中文](README.zh-CN.md)
 
@@ -14,7 +14,22 @@ A cross-platform GUI regular expression tool built with [Racket](https://racket-
 - **graph** — generate a railroad diagram as SVG
 - **JSON mode** — structured output for agent consumption (`--json`)
 
-## Usage
+## Requirements
+
+| Dependency | Purpose / Version |
+|------------|-------------------|
+| [Racket](https://racket-lang.org/) | Tested with v9.0 |
+
+## Quick Start
+
+### 1. Clone
+
+```bash
+git clone https://github.com/turinglambdaai/regexmate.git
+cd regexmate
+```
+
+### 2. Usage
 
 ```bash
 # Validate regex syntax
@@ -33,7 +48,7 @@ racket main.rkt explain '\d{2,4}' --json
 racket main.rkt graph 'a|b' -o diagram.svg
 ```
 
-## JSON Output Examples
+### JSON Output Examples
 
 **validate:**
 
@@ -53,25 +68,21 @@ racket main.rkt graph 'a|b' -o diagram.svg
 {"pattern":"\\d{2,4}","parts":[{"type":"re-quantifier","description":"数字 (\\d) × {2,4}","raw":"\\d{2,4}"}]}
 ```
 
-## Requirements
-
-- [Racket](https://racket-lang.org/) (tested with v9.0)
-
 ## Project Structure
 
 ```
 regexmate/
-├── main.rkt                 CLI entry point
-├── run-tests.rkt            Test runner
+├── main.rkt                 # CLI entry point
+├── run-tests.rkt            # Test runner
 ├── core/
-│   ├── ast.rkt              Regex AST data structures
-│   ├── regex-engine.rkt     Validation and matching engine
-│   └── regex-parser.rkt     Recursive descent parser
+│   ├── ast.rkt              # Regex AST data structures
+│   ├── regex-engine.rkt     # Validation and matching engine
+│   └── regex-parser.rkt     # Recursive descent parser
 ├── output/
-│   ├── highlight.rkt        ANSI terminal highlighting
-│   ├── json-format.rkt      JSON output formatting
-│   ├── human-format.rkt     Human-readable output
-│   └── railroad.rkt         SVG railroad diagram generator
+│   ├── highlight.rkt        # ANSI terminal highlighting
+│   ├── json-format.rkt      # JSON output formatting
+│   ├── human-format.rkt     # Human-readable output
+│   └── railroad.rkt         # SVG railroad diagram generator
 └── tests/
     ├── test-regex-engine.rkt
     ├── test-regex-parser.rkt
@@ -91,4 +102,4 @@ racket main.rkt <command> <args>
 
 ## License
 
-This project does not currently include a license file.
+Licensed under the [MIT License](LICENSE).
